@@ -169,10 +169,10 @@
 .header-link:focus {
   color: var(--acsent-text-color);
 }
-.header-item, .header-link.current {
+.header-item,
+.header-link.current {
   color: var(--acsent-text-color);
 }
-
 
 /* header-contacts */
 .contacts-link {
@@ -206,7 +206,10 @@
   padding-top: 200px;
   padding-bottom: 200px;
   background-color: var(--foot-bgc-color);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
     url(../images/Hero/Hero.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -253,6 +256,58 @@
   background-color: var(--acsent-btn-bgc);
   color: var(--acsent-btn-color);
 }
+.bacdroup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 528px;
+  height: 581px;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.close-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 0;
+  padding: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #fff;
+}
+.bacdroup.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden ;
+}
+.cross {
+  background-color: #fff;
+  padding: 4px;
+  
+}
+
+
+
 /* H2-section title */
 .section-title {
   margin-top: 0;
@@ -490,7 +545,7 @@
 }
 
 .portfolio-link:hover .animation-text {
- transform: translatey(0);
+  transform: translatey(0);
 }
 .animation-div {
   position: relative;
@@ -514,12 +569,12 @@
   height: 100%;
   transform: translatey(150%);
   transition: transform 250ms ease;
-  background-color: rgba(33, 150, 243, 0.9);;
+  background-color: rgba(33, 150, 243, 0.9);
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
 
-color: #FFFFFF;
+  color: #ffffff;
 }
 
 .card {
